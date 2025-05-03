@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+  <title>Editar Peça</title>
+</head>
+<body>
+  <header class="topo">
+    <a href="index.html" class="btn-voltar-topo">←</a>
+    <h1>Editar Peça</h1>
+  </header>
+
+  <form id="form-editar">
+    <input type="hidden" name="id" id="edit-id" />
+    <input type="text" name="fabricante" placeholder="Fabricante" id="edit-fabricante" required />
+    <input type="text" name="modelo" placeholder="Modelo" id="edit-modelo" required />
+    <input type="text" name="nome" placeholder="Nome da Peça" id="edit-nome" required />
+    <input type="text" name="localizacao" placeholder="Localização" id="edit-localizacao" required />
+    <input type="text" name="partnumber" placeholder="Part Number" id="edit-partnumber" required />
+    <textarea name="obs" placeholder="Observações" id="edit-obs"></textarea>
+    <input type="file" name="foto" id="edit-foto" accept="image/*" capture="environment" />
+    <button type="submit">Salvar Alterações</button>
+  </form>
+
+  <footer>
+    <p>© André Klarosk</p>
+  </footer>
+</body>
+</html>

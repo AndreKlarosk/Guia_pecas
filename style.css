@@ -1,0 +1,142 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    color: #1b1f3b;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header {
+    background: #003366;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    margin-top: auto;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .shortcut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0 6px #ccc;
+    transition: transform 0.2s;
+  }
+  .shortcut:hover {
+    transform: scale(1.05);
+  }
+  .shortcut img {
+    width: 48px;
+    height: 48px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+  input, textarea, button {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  button {
+    background: #cc0000;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .card {
+    background: white;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #ccc;
+  }
+  .topo {
+    background: #003366;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .topo h1 {
+    margin: 0;
+    font-size: 1.4rem;
+  }
+  .btn-voltar-topo {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.2s;
+  }
+  .btn-voltar-topo:hover {
+    background: rgba(255,255,255,0.3);
+  }
+  .btn-acao {
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    margin: 0.3rem 0.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .btn-acao:hover {
+    background: #001f4d;
+  }
+  .btn-acao.excluir {
+    background: #990000;
+  }
+  .btn-acao.excluir:hover {
+    background: #660000;
+  }
+  #filtroFabricante, #filtroModelo, #filtroLocalizacao {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 8px;
+  }
+  #filtroResultados {
+    max-height: 70vh; /* altura máxima visível */
+    overflow-y: auto;
+    padding-right: 8px;
+    scroll-behavior: smooth;
+  }
+  
+  /* Scroll personalizado (opcional) */
+  #filtroResultados::-webkit-scrollbar {
+    width: 6px;
+  }
+  #filtroResultados::-webkit-scrollbar-thumb {
+    background-color: #003366; /* cor da TECBAN */
+    border-radius: 4px;
+  }
+  #filtroResultados::-webkit-scrollbar-track {
+    background: #f0f0f0;
+  }
+  

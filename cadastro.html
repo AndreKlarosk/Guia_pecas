@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+  <title>Cadastro de Peça</title>
+</head>
+<body>
+  <header class="topo">
+    <a href="index.html" class="btn-voltar-topo">←</a>
+    <h1>Nova Peça</h1>
+  </header>
+
+  <form id="form-cadastro">
+    <input type="text" name="fabricante" placeholder="Fabricante" required />
+    <input type="text" name="modelo" placeholder="Modelo" required />
+    <input type="text" name="nome" placeholder="Nome da Peça" required />
+    <input type="text" name="localizacao" placeholder="Localização" required />
+    <input type="text" name="partnumber" placeholder="Part Number" required />
+    <textarea name="obs" placeholder="Observações"></textarea>
+    <input type="file" name="foto" accept="image/*" capture="environment" />
+    <button type="submit">Salvar Peça</button>
+  </form>
+
+  <footer>
+    <p>© André Klarosk</p>
+  </footer>
+</body>
+</html>

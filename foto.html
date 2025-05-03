@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Busca por Foto</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.1/dist/tesseract.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <a href="index.html" class="btn-voltar-topo">←</a>
+    <h1>Busca por Foto</h1>
+  </header>
+
+  <main class="card" style="text-align:center">
+    <input type="file" accept="image/*" id="imagemFoto" capture="environment" />
+    <br /><br />
+    <button class="btn-acao" onclick="lerFoto()">🔍 Ler Foto</button>
+    <br /><br />
+    <div id="ocrResultado"></div>
+    <section id="resultado" class="card"></section>
+  </main>
+
+  <footer>
+    <p>© André Klarosk</p>
+  </footer>
+</body>
+</html>

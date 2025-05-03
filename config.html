@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+  <title>Exportar / Importar</title>
+</head>
+<body>
+  <header class="topo">
+    <a href="index.html" class="btn-voltar-topo">←</a>
+    <h1>Exportar / Importar</h1>
+  </header>
+
+  <main class="card" style="text-align:center">
+    <button class="btn-acao" onclick="exportarJSON()">⬇️ Exportar Dados</button>
+    <br /><br />
+    <input type="file" id="importarArquivo" accept=".json" />
+    <button class="btn-acao" onclick="importarJSON()">⬆️ Importar Dados</button>
+  </main>
+
+  <footer>
+    <p>© André Klarosk</p>
+  </footer>
+</body>
+</html>

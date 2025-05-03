@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+  <title>Buscar Peça</title>
+</head>
+<body>
+  <header class="topo">
+    <a href="index.html" class="btn-voltar-topo">←</a>
+    <h1>Buscar Peça</h1>      
+  </header>
+  <div style="margin: 1rem 0;">
+    <label for="filtroFabricante"><strong>Filtrar por:</strong></label>
+    <select id="filtroFabricante" onchange="filtrarPecas()">
+      <option value="">Fabricante</option>
+    </select>
+    <select id="filtroModelo" onchange="filtrarPecas()">
+      <option value="">Modelo</option>
+    </select>
+    <select id="filtroLocalizacao" onchange="filtrarPecas()">
+      <option value="">Localização</option>
+    </select>
+    <button onclick="limparFiltros()" class="btn-acao" style="margin-left: 1rem;">🧹 Limpar Filtros</button>
+
+  </div>
+  <p id="contadorResultados" style="margin-bottom: 0.5rem; font-weight: bold;"></p>
+
+  <section id="filtroResultados" class="card"></section>
+  <form id="form-busca">
+    <input type="text" id="busca" placeholder="Digite Nome ou Part Number" required />
+    <div style="display:flex; gap:0.5rem; margin-top:0.5rem;">
+      <button type="submit">Buscar</button>
+      <button type="button" onclick="limparBusca()">Limpar</button>
+    </div>
+  </form>
+
+  <div id="historicoBusca" class="card"></div>
+  <section id="resultado" class="card"></section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (document.getElementById("filtroFabricante")) {
+        carregarFiltros();
+      }
+    });
+  </script>
+  
+  <footer>
+    <p>© André Klarosk</p>
+  </footer>
+</body>
+</html>
